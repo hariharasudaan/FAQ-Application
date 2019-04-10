@@ -7,11 +7,11 @@
                 <div class="card">
                     <div class="card-header">My Profile</div>
                     <div class="card-body">
-                        {{--@if($edit === FALSE)
+                        @if($edit === FALSE)
                             {!! Form::model($profile, ['route' => ['profile.store', Auth::user()->id], 'method' => 'post']) !!}
                         @else()
                             {!! Form::model($profile, ['route' => ['profile.update', Auth::user()->id, $profile->id], 'method' => 'patch']) !!}
-                        @endif--}}
+                        @endif
                         <div class="form-group">
                             {!! Form::label('fname', 'First Name') !!}
                             {!! Form::text('fname', $profile->fname, ['class' => 'form-control','required' => 'required']) !!}
