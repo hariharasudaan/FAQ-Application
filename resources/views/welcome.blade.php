@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #4c110f;
+                color: #f8fafc;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #f8fafc;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -82,6 +82,10 @@
             <div class="content">
                 <div class="title m-b-md">
                     Mini Project - 3
+                    <br>
+                    <b>by Hari Hara Sudaan Krishnen</b>
+                    <br>
+                    <i>UCID: hk444</i>
                 </div>
                 
             </div>
