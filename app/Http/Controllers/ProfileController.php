@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +26,9 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $profile = new Profile();
+        $edit = FALSE;
+        return view('profileForm', ['profile' => $profile,'edit' => $edit  ]);
     }
 
     /**
