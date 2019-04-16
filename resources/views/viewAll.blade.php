@@ -11,12 +11,12 @@
             <div class="container align-content-xl-between">
                 <hr>
                 <div class="float-left">
-                    <button><a href="{{ url('/home/sort/all') }}">Sort by recency</a></button>
+                    <button><a href="{{ url('/home/sort/all') }}">Sort by Recently Updated</a></button>
                 </div>
                 <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                     <div class="row float-lg-right">
                         <div class="form-group">
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Type Exact Question Name">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Type Question Name">
                         </div>
                         <div>
                             <button class="btn btn-success" type="submit" id="search-form">Search</button>

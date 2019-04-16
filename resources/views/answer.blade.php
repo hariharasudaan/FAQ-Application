@@ -35,7 +35,7 @@
                 <div class="card">
 
                     <div class="card-header">
-                        <h3 class="float-left"><b><i>COMMENNTS SECTION:</i></b></h3>
+                        <h4 class="float-left"><b><i>COMMENTS SECTION:</i></b></h4>
                         <a class="btn btn-primary float-right"
                                                 href="{{ route('comments.create', ['answer_id'=> $answer->id,'question_id'=> $question])}}">
                             Add Comments
