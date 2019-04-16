@@ -33,7 +33,10 @@
 
                 <br>
                 <div class="card">
-                    <div class="card-header"><a class="btn btn-primary float-left"
+
+                    <div class="card-header">
+                        <h3 class="float-left"><b><i>COMMENNTS SECTION:</i></b></h3>
+                        <a class="btn btn-primary float-right"
                                                 href="{{ route('comments.create', ['answer_id'=> $answer->id,'question_id'=> $question])}}">
                             Add Comments
                         </a></div>
@@ -50,10 +53,12 @@
                             {{$comments->body}}
                         </div>
                         <div class="card-footer">
+                            @if(Auth::user() == $comments->user)
                             {{ Form::open(['method'  => 'DELETE', 'route' => ['comments.destroy', $question, $answer, $comments->id]])}}
                             <button class="btn btn-outline-danger" value="submit" type="submit" id="submit">Delete Comment
                             </button>
                             {!! Form::close() !!}
+                            @endif
                         </div>
                     </div>
                 @endforeach
