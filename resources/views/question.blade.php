@@ -8,10 +8,10 @@
                     <div class="card-header">Question</div>
 
                     <div class="card-body">
-
                         {{$question->body}}
                     </div>
                     <div class="card-footer">
+                        @if(Auth::user() == $question->user)
                         <a class="btn btn-primary float-right"
                            href="{{ route('questions.edit',['id'=> $question->id])}}">
                             Edit Question
@@ -21,6 +21,7 @@
                         <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
                         </button>
                         {!! Form::close() !!}
+                        @endif
                     </div>
                 </div>
             </div>
