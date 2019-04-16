@@ -8,6 +8,12 @@
                     <div class="card-header">Answer</div>
                     <div class="card-body">
                         {{$answer->body}}
+
+                        <div class="blockquote">
+                            <a href="{{ route('answers.updateVotesIncrease',['question_id'=> $question, 'answer_id'=> $answer->id, ]) }}">Upvote </a>{{$answer->upvotes}}
+                            <a href="{{ route('answers.updateVotesDecrease',['question_id'=> $question, 'answer_id'=> $answer->id, ]) }}">Downvote </a>{{$answer->downvotes}}
+                        </div>
+
                     </div>
                     <div class="card-footer">
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['answers.destroy', $question, $answer->id]])}}
