@@ -17,4 +17,8 @@ class Answer extends Model
     {
         return $this->belongsTo('App\Question');
     }
+
+    public function comment() {
+        return $this->hasMany('App\Comment');
+    }
 }

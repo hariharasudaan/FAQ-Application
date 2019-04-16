@@ -69,11 +69,15 @@ class User extends Authenticatable
         return $this->hasOne('App\Profile');
     }
 
-    public function questions() {
+    public function question() {
         return $this->hasMany('App\Question');
     }
 
-    public function answers() {
+    public function answer() {
         return $this->hasMany('App\Answer');
+    }
+
+    public function comment() {
+        return $this->hasMany('App\Comment');
     }
 }

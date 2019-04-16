@@ -38,3 +38,7 @@ Route::get('/questions/{question_id}/answer/{answer_id}/downvote', 'AnswerContro
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+
+Route::get('/questions/{question}/answers/{answer_id}/comments/create', 'CommentController@create')->name('comments.create');
+Route::post('/questions/{question}/answers/{answer}/comments/', 'CommentController@store')->name('comments.store');
+Route::delete('/questions/{question}/answers/{answer}/comments/{comment_id}', 'CommentController@destroy')->name('comments.destroy');

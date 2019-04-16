@@ -21,7 +21,7 @@
                                             <div class="card-header">
                                                 <small class="text-muted">
                                                     Updated: {{ $question->created_at->diffForHumans() }}
-                                                    Answers: {{ $question->answers()->count() }}
+                                                    Answers: {{ $question->answer()->count() }}
 
                                                 </small>
                                             </div>
