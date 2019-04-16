@@ -33,6 +33,7 @@ Feature which allows the user to view other user questions, sorting the question
 # EPIC NUMBER 3
 Feature which allows the user to post the votes for the answers posted
 
+# User Story
 - As a user, I should be able to vote up for an answer, so that I feel the answer is worthy.
 - As a user, I should be able to vote down for an answer, so that I feel the answer is not good.
 - As a user, I should be able to view the count of the vote up and vote down, so that I can analyse other user opinions.
@@ -43,6 +44,7 @@ Feature which allows the user to post the votes for the answers posted
 # EPIC NUMBER 4
 Feature allows only the owner of the questions, answers and comments to make changes to the existing content.
 
+# User Story
 - As a user, I should be the only one who can edit my question, so that others cannot edit my question.
 - As a user, I should be the only one who can edit my answer, so that others cannot edit my answer.
 - As a user, I should be the only one who can delete my question, so that others cannot delete my question.
