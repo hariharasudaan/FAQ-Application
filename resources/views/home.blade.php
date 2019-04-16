@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Questions Created by Me
+                    <div class="card-header"><center><b><h3>Questions Created by Me</h3></b></center>
 
                         <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                             Create a Question
@@ -23,7 +23,7 @@
                                 @forelse($questions as $question)
                                     <div class="col-sm-4 d-flex align-items-stretch">
                                         <div class="card mb-3 ">
-                                            <div class="card-header bg-white">
+                                            <div class="card-header">
                                                 <small class="text-muted">
                                                     Updated: {{ $question->created_at->diffForHumans() }}<br>
                                                     Answers: {{ $question->answer()->count() }}<br>

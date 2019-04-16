@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Questions Created by Everyone
+                    <div class="card-header"><center><b><h3>Questions Created by Everyone</h3></b></>
 
                         <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                             Create a Question
