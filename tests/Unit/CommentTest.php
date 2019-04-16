@@ -15,6 +15,18 @@ class CommentTest extends TestCase
      */
     public function testExample()
     {
-        $this->assertTrue(true);
+        $user = $user = factory(\App\User::class)->make();
+        $user->save();
+        $question = factory(\App\Question::class)->make();
+        $question->user()->associate($user);
+        $question->save();
+        $answer = factory(\App\Answer::class)->make();
+        $answer->user()->associate($user);
+        $answer->question()->associate($question);
+        $answer->save();
+        $comment = factory(\App\Comment::class)->make();
+        $comment->user()->associate($user);
+        $comment->answer()->associate($answer);
+        $this->assertTrue($comment->save());
     }
 }
