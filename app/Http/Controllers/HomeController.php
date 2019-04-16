@@ -53,4 +53,10 @@ class HomeController extends Controller
         $questions = $user->question()->orderByDesc('updated_at')->paginate(6);
         return view('home')->with('questions', $questions);
     }
+
+    public function sortAll()
+    {
+        $questions = Question::all()->sortByDesc('updated_at');
+        return view('viewAll')->with('questions', $questions);
+    }
 }

@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/viewAll', 'HomeController@showAllQuestions')->name('viewAll');
 Route::get('/home/search', 'HomeController@search')->name('home.search');
 Route::get('/home/sort', 'HomeController@sort')->name('home.sort');
+Route::get('/home/sort/all', 'HomeController@sortAll')->name('home.sortAll');
 
 
 Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
