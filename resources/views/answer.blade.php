@@ -47,7 +47,12 @@
                         <div class="card-body">
                             {{$comments->body}}
                         </div>
-                        
+                        <div class="card-footer">
+                            {{ Form::open(['method'  => 'DELETE', 'route' => ['comments.destroy', $question, $answer, $comments->id]])}}
+                            <button class="btn btn-outline-danger" value="submit" type="submit" id="submit">Delete Comment
+                            </button>
+                            {!! Form::close() !!}
+                        </div>
                     </div>
                 @endforeach
 
