@@ -132,4 +132,22 @@ class AnswerController extends Controller
         return redirect()->route('questions.show',['question_id' => $question])->with('message', 'Delete');
 
     }
+
+    public function updateVotesIncrease($question, $answer)
+    {
+        $answer = Answer::find($answer);
+        $answer->upvotes++;
+        $answer->save();
+
+        return redirect()->route('answers.show', ['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');
+    }
+
+    public function updateVotesDecrease($question, $answer)
+    {
+        $answer = Answer::find($answer);
+        $answer->downvotes++;
+        $answer->save();
+
+        return redirect()->route('answers.show', ['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');
+    }
 }
