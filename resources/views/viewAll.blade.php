@@ -25,8 +25,9 @@
                                         <div class="card mb-3 ">
                                             <div class="card-header">
                                                 <small class="text-muted">
-                                                    Updated: {{ $question->created_at->diffForHumans() }}
-                                                    Answers: {{ $question->answer()->count() }}
+                                                    Updated: {{ $question->created_at->diffForHumans() }}<br>
+                                                    Answers: {{ $question->answer()->count() }}<br>
+                                                    Owner: {{\App\User::find($question->user_id)->email}}
 
                                                 </small>
                                             </div>

@@ -36,6 +36,7 @@
                     <div class="card-body">
                         @forelse($question->answer as $answer)
                             <div class="card">
+                                <div class="card-header">{{\App\User::find($answer->user_id)->email}}</div>
                                 <div class="card-body">{{$answer->body}}</div>
                                 <div class="card-footer">
 

@@ -23,10 +23,11 @@
                                 @forelse($questions as $question)
                                     <div class="col-sm-4 d-flex align-items-stretch">
                                         <div class="card mb-3 ">
-                                            <div class="card-header">
+                                            <div class="card-header bg-white">
                                                 <small class="text-muted">
-                                                    Updated: {{ $question->created_at->diffForHumans() }}
-                                                    Answers: {{ $question->answer()->count() }}
+                                                    Updated: {{ $question->created_at->diffForHumans() }}<br>
+                                                    Answers: {{ $question->answer()->count() }}<br>
+                                                    Owner: {{\App\User::find($question->user_id)->email}}
 
                                                 </small>
                                             </div>
