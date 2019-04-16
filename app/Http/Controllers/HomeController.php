@@ -40,4 +40,11 @@ class HomeController extends Controller
         return view('viewAll')->with('questions', $questions);
     }
 
+    public function search(Request $request)
+    {
+        $questions = Question::all()->where('body', $request->name);
+        return view('search')->with('questions', $questions);
+    }
+
+
 }

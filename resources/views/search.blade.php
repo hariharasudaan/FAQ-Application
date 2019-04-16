@@ -7,7 +7,6 @@
             <a class="btn btn-dark float-left" href="{{ url('/home/viewAll') }}">
                 <b>View Questions Created by Everyone</b>
             </a>
-
                 <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                     <div class="row float-lg-right">
                         <div class="form-group">
@@ -18,7 +17,6 @@
                         </div>
                     </div>
                 </form>
-
             </div>
             <div class="col-md-12">
                 <div class="card">
@@ -62,11 +60,6 @@
 
                             </div>
 
-                        </div>
-                        <div class="card-footer">
-                            <div class="float-right">
-                                {{ $questions->links() }}
-                            </div>
                         </div>
 
                     </div>
