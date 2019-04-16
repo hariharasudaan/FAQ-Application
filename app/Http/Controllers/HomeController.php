@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 
 
 class HomeController extends Controller
@@ -29,4 +33,11 @@ class HomeController extends Controller
         $questions = $user->question()->paginate(6);
         return view('home')->with('questions', $questions);
     }
+
+    public function showAllQuestions()
+    {
+        $questions = Question::all();
+        return view('viewAll')->with('questions', $questions);
+    }
+
 }

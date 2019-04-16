@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-            <a class="btn btn-dark float-left" href="{{ url('/home/viewAll') }}">
-                <b>View Questions Created by Everyone</b>
+            <a class="btn btn-dark float-left" href="{{ url('/home') }}">
+                <b>View Questions Created by Me</b>
             </a>
             </div>
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Questions Created by Me
+                    <div class="card-header">Questions Created by Everyone
 
                         <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                             Create a Question
@@ -47,13 +47,6 @@
                                     There are no questions to view, you can create a create a question.
                                 @endforelse
 
-
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <div class="float-right">
-                                {{ $questions->links() }}
                             </div>
                         </div>
 
