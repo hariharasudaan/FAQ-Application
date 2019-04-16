@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Collection;
@@ -46,5 +47,10 @@ class HomeController extends Controller
         return view('search')->with('questions', $questions);
     }
 
-
+   /* public function searchEmail(Request $request)
+    {
+        $user = User::find($request->user_id);
+        $questions = Question::all()->where('user_id', $user->user_id);
+        return view('search')->with('questions', $questions);
+    }*/
 }

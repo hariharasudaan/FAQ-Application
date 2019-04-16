@@ -4,23 +4,30 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-            <a class="btn btn-dark float-left" href="{{ url('/home/viewAll') }}">
-                <b>View Questions Created by Everyone</b>
+            <a class="btn btn-dark float-left" href="{{ url('/home') }}">
+                <b>View Questions Created by Me</b>
             </a>
-                <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
-                    <div class="row float-lg-right">
-                        <div class="form-group">
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Type Exact Question Name">
-                        </div>
-                        <div>
-                            <button class="btn btn-success" type="submit" id="search-form">Search</button>
-                        </div>
-                    </div>
-                </form>
+                <a class="btn btn-dark float-right" href="{{ url('/home/viewAll') }}">
+                    <b>View Questions Created by Everyone</b>
+                </a>
             </div>
+
+            <div class="container align-content-xl-between"><hr>
+            <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
+                <div class="row float-lg-right">
+                    <div class="form-group">
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Type Exact Question Name">
+                    </div>
+                    <div>
+                        <button class="btn btn-success" type="submit" id="search-form">Search</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header"><center><b><h3>Questions Created by Me</h3></b></center>
+                    <div class="card-header">
 
                         <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                             Create a Question

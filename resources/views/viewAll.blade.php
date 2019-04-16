@@ -8,6 +8,19 @@
                 <b>View Questions Created by Me</b>
             </a>
             </div>
+            <div class="container align-content-xl-between">
+                <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
+                    <div class="row float-lg-right">
+                        <div class="form-group">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Type Exact Question Name">
+                        </div>
+                        <div>
+                            <button class="btn btn-success" type="submit" id="search-form">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header"><center><b><h3>Questions Created by Everyone</h3></b></>

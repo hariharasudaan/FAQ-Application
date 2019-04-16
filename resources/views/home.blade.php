@@ -7,7 +7,9 @@
             <a class="btn btn-dark float-left" href="{{ url('/home/viewAll') }}">
                 <b>View Questions Created by Everyone</b>
             </a>
+            </div>
 
+            <div class="container align-content-xl-between">
                 <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                     <div class="row float-lg-right">
                         <div class="form-group">
@@ -18,8 +20,8 @@
                         </div>
                     </div>
                 </form>
-
             </div>
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header"><center><b><h3>Questions Created by Me</h3></b></center>
