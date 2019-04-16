@@ -10,6 +10,10 @@
             </div>
 
             <div class="container align-content-xl-between">
+                <hr>
+                <div class="float-left">
+                    <button><a href="{{ url('/home/sort') }}">Sort by recency</a></button>
+                </div>
                 <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                     <div class="row float-lg-right">
                         <div class="form-group">

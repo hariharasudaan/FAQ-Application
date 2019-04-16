@@ -47,10 +47,10 @@ class HomeController extends Controller
         return view('search')->with('questions', $questions);
     }
 
-   /* public function searchEmail(Request $request)
+    public function sort()
     {
-        $user = User::find($request->user_id);
-        $questions = Question::all()->where('user_id', $user->user_id);
-        return view('search')->with('questions', $questions);
-    }*/
+        $user = Auth::user();
+        $questions = $user->question()->orderByDesc('updated_at')->paginate(6);
+        return view('home')->with('questions', $questions);
+    }
 }
